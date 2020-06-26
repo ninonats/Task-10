@@ -1,3 +1,4 @@
+
 html,body{
 	height: 100%;
 	width: 100%;
@@ -8,19 +9,37 @@ html,body{
 }
 /*HEADER------------------*/
 .shavilogo{ 
+	float: left;
 	max-height: 95px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	display: inline-block;
 
 }
+.headernavigation{
+	/*display: flex;
+    flex-wrap: wrap;*/
+}
+.list{
+	display: inline-block;
+	margin-top: 72px;
+	flex-wrap: wrap;
+}
+.navbar{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+
 li{
 	float: left;
-	margin-right: 27px;
+	margin-right: 57px;
 	display: inline-block;
 	color: #707070;
 	font-size: 20px #707070;
 	font-family: "ArchyEDT-Thin", sans-serif;
+	flex-wrap: wrap;
 
 }
 a{
@@ -47,9 +66,11 @@ a{
 	margin-bottom: 15px;
 	margin-top: 10px;
 	border:2px solid #00000029;
-	box-shadow: 0px 0px blur 6px #00000029;
+	-webkit-box-shadow: 0px 0px blur 6px #00000029;
+	        box-shadow: 0px 0px blur 6px #00000029;
 	opacity: 70%
 	padding 10px;
+	flex-wrap: wrap;
 }
 
 .form-group{
@@ -64,33 +85,43 @@ a{
 }
 #label{
 	margin-left:31px;
-	/*height: 31px;*/
 	opacity:1;
-	color: #2E2E2E
+	color: #2E2E2E;
 	font-family: 'Roboto', sans-serif;
-	font-size:19px;
-
+	font-size:23px;
 
 }
 .send{
 	background-color: #2E2E2E;
 	color: white;
-	margin-left: 20px;
+	margin:0 auto;
 	max-height: 52px;
 	max-width: 151px;
 	opacity: 1;
 	border:none;
-	font-size:19px;
+	font-size:21px;
+	padding: 20px;
+	display: inline-block;
+	flex-wrap: wrap;
+
 }
+
 /*FOOTER-----------------------------------*/
 .footer-wrapper {
 	margin-top: 642px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #FFFFFF;
     background-color: #2E2E2E;
     padding: 40px;
+    flex-wrap: wrap;
 }
 .footer-wrapper h4 {
 	font-family: 'ArchyEDT';
@@ -104,10 +135,110 @@ a{
 }
 .social-box{
 	width: 122px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .social{
 	height: 44px;
+	flex-wrap: wrap;
 }
+/*RESPONSIVE*/
+@media (max-width: 1024px){
+	#label {
+		font-size:19px;
+	}
+	.form-wraper{
+		width: 80%;
+	}
+	.shavilogo{
+		width: 80%;
+	}
+	.tetrilogo{
+		width: 80%;
+	}
+	li {
+		font-size: 19px;
+	}
+}
+
+@media only screen and (max-width: 792px) {
+	#label {
+		font-size:15px;
+	}
+	.form-wraper{
+		width: 60%;
+	}
+	.shavilogo {
+		width: 50%;
+	}
+	.tetrilogo{
+		width: 50%;
+	}
+	li {
+		font-size: 15px;
+	}
+	.send{
+		width: 89px;
+	}
+	p{
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width: 480px){
+	#label {
+		font-size:12px;
+	}
+	.form-wraper{
+		width: 40%;
+	}
+	.shavilogo{
+		width: 40%;
+	}
+	.tetrilogo{
+		width: 40%;
+	}
+	li {
+		font-size: 12px;
+	}
+	.send{
+		width: 80px;
+	}
+	p{
+		font-size: 11px;
+	}
+}
+@media only screen and (max-width: 320px){
+	#label {
+		font-size:10px;
+	}
+	.form-wraper{
+		width: 10%;
+	}
+	.shavilogo{
+		width: 10%;
+	}
+	.tetrilogo{
+		width: 10%;
+	}
+	li {
+		font-size: 10px;
+	}
+	.send{
+		width: 10px;
+	}
+	.send{
+		width: 80px;
+	}
+	p{
+		font-size: 11px;
+	}
+
+}
+
+
